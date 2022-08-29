@@ -1,0 +1,29 @@
+{
+    "app": {
+        "name": "Waze",
+        "description": "Waze integration"
+    },
+    "modules": {
+        "traffic": {
+            "name": "Waze Traffic",
+            "description": "Display Traffic around your screens",
+            "options": {
+                "geolocation": {
+                    "text": "Using display location",
+                    "label": "The player geolocation will be used to display local weather forecast."
+                },
+                "fixed": {
+                    "text": "Predefined location",
+                    "label": "Type the address of the desired location."
+                },
+                "address": "Address",
+                "zoom": {
+                    "label": "Map zoom",
+                    "small": "Small",
+                    "medium": "Medium",
+                    "high": "High"
+                }
+            }
+        }
+    }
+}

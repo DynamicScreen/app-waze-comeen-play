@@ -1,0 +1,14 @@
+{
+    "app": {
+        "name": "Waze",
+        "description": "Intégration Waze"
+    },
+    "modules": {
+        "waze": {
+            "name": "Trafic Waze",
+            "description": "Affichez le trafic autour de vos écrans",
+            "options": {
+            }
+        }
+    }
+}

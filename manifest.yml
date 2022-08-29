@@ -1,0 +1,25 @@
+# YAML
+id: app-waze-comeen-play
+name: app.name
+description: app.description
+logo: fab fa-waze
+version: 0.2.0
+channel: stable
+api-level: 1
+color: blue
+author:
+    name: Comeen
+    email: support@comeen.com
+modules:
+    - name: modules.waze.name
+      logo: fab fa-waze
+      identifier: waze
+      color: blue
+      type: slide
+      description: modules.waze.description
+      options:
+          vue:
+              component: src/Waze/Waze.ts
+              options: src/Waze/WazeOptions.ts
+          php:
+              handler: \Comeen\Waze\Waze\WazeHandler
