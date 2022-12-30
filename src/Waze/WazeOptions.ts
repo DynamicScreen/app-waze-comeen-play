@@ -13,11 +13,16 @@ export default class WazeTrafficOptionsModule extends SlideOptionsModule {
   };
 
   setup(props: Record<string, any>, vue: VueInstance, context: ISlideOptionsContext) {
-    const { h } = vue;
+    const { h, computed, watchEffect } = vue;
 
     const update = context.update;
 
     const { Field, TextInput, SegmentedRadio, NumberInput } = this.context.components
+
+    context.updateAutoName(this.t("app.name"))
+
+    const valid = computed(() => update.option("type").modelValue == "auto" || update.option("address").modelValue.latitude)
+    watchEffect(() => context.updateValidationStatus(valid.value))
 
     const updateAddress = update.option('address', {
       default: { address: '', latitude: null, longitude: null },
